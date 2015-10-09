@@ -1,0 +1,36 @@
+<div class="container">
+
+	<div class="row">
+    <h2>Crea Articolo</h2>
+    <div class="divider"></div>
+	<div class="row">
+		<div class="input-field col s12">
+			<input id="titolo" type="text" class="validate" ng-model="articolo.titolo">
+			<label for="titolo">Titolo</label>
+		</div>
+	</div>
+	<div class="row">
+		<form action="#">
+			<div class="file-field input-field">
+				<div class="btn">
+					<span>File</span>
+					<input type="file">
+				</div>
+				<div class="file-path-wrapper">
+					<input class="file-path validate" type="text">
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="row">
+	    <div class="input-field col s12">
+	      <div text-angular ng-model="articolo.testo"  ta-toolbar-class="btn-toolbar" ta-toolbar-group-class="btn-group" ta-toolbar-button-class="btn-flat waves-effect waves-orange btn" ta-toolbar-button-active-class="active"></div>
+	    </div>
+	</div>
+    <span style="margin: 10px"></span>
+    <div class="row center-align">
+      <button class="btn" ng-click="salvaArticolo()" style="display: inline-block">Salva</button>
+    </div>
+  </div>
+
+</div>

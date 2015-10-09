@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="card col s12 m6 offset-m3 center-align">
+        <span class="card-title">Login</span>
+            <div class="row">
+                <div class="container">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="loginEmail" required name="email" type="email" ng-model="email" />
+                                <label for="loginEmail">email</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="loginPass" required name="pass" type="password" ng-model="pass" />
+                                <label for="loginPass">password</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        <div class="card-action">
+            <a href="#/" class="btn" ng-click="passwordLogin(email, pass)">Login</a>
+        </div>
+    </div>
+
+</div>
+
+<!--<form role="form">
+  <p class="form-group">
+    <label for="loginEmail">email</label>
+    <input id="loginEmail" required name="email" type="email" ng-model="email" />
+  </p>
+  <p class="form-group">
+    <label for="loginPass">password</label>
+    <input id="loginPass" required name="pass" type="password" ng-model="pass" />
+  </p>
+  <p class="form-group" ng-cloak ng-show="createMode">
+    <label for="loginConfirm">confirm pass</label>
+    <input id="loginConfirm" required name="confirm" type="password" ng-model="confirm" />
+  </p>
+
+  <p>
+    <button  ng-click="passwordLogin(email, pass)" ng-hide="createMode">Log In</button>
+    <button  ng-click="createMode = true" ng-hide="createMode">Register</button>
+    <button  ng-cloak ng-show="createMode"
+            ng-click="createAccount(email, pass, confirm)">Create Account</button>
+    <button  ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</button>
+  </p>
+</form>
+<p ng-show="err" class="error">{{err}}</p>-->
+

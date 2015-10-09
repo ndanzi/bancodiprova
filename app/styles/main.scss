@@ -1,0 +1,71 @@
+// bower:scss
+@import "materialize/sass/materialize.scss";
+// endbower
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  @extend .grey-text, .text-darken-4;
+}
+
+main {
+  flex: 1 0 auto;
+  height: 100%;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+nav .button-collapse i {
+  font-size: 2.2rem;
+}
+
+.side-nav a {
+  font-size: 1.2rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+div.ta-toolbar .btn{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.articolo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-image img {
+  height: 150px;
+}
+
+.carousel {
+  height: 300px;
+}
+
+@media #{$medium-and-up} {
+  .v-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

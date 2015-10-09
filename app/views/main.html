@@ -1,0 +1,59 @@
+<div class="row">
+  <ul rn-carousel class="carousel">
+    <li ng-repeat="file in files">
+      <img class="responsive-img" ng-src="{{file.url}}">
+    </li>
+  </ul>
+</div>
+<div class="container">
+  <div class="row">
+    <h2>Editor di testo</h2>
+    <div class="divider"></div>
+    <div class="input-field col s12">
+      <div text-angular ng-model="testo"  ta-toolbar-class="btn-toolbar" ta-toolbar-group-class="btn-group" ta-toolbar-button-class="btn-flat waves-effect waves-orange btn" ta-toolbar-button-active-class="active"></div>
+    </div>
+    <span style="margin: 10px"></span>
+    <div class="row center-align">
+      <button class="btn" ng-click="aggiungiArticolo()" style="display: inline-block">Salva</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card-panel">
+      <h2>Preview</h2>
+      <div ta-bind="text" class="flow-text" ng-model="testo"></div>
+    </div>
+  </div>
+
+  <h2>Articoli salvati:</h2>
+  <div class="divider"></div>
+  <div class="card-panel" ng-repeat="articolo in articoli">
+    <div ta-bind="text" ng-model="articolo.$value" class="flow-text articolo"></div>
+  </div>
+
+  <div class="row">
+    <div class="card-panel">
+      <h2>File uploader</h2>
+      <div class="row center-align">
+        <button class="btn" ng-click="pickFile()" style="display: inline-block">Click to add images</button>
+      </div>
+      <div class="row">
+        <div class="col s12 m4 l3" ng-repeat="file in files">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" ng-src="{{file.url | fpConvert: {h: 200, fit: 'max'} }}" alt="{{file.filename}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">{{file.filename}}<i class="material-icons right">more_vert</i></span>
+              <p><a href="#">This is a link</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{file.filename}}<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
