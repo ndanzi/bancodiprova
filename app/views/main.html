@@ -1,7 +1,11 @@
-<div class="row">
-  <ul rn-carousel class="carousel">
+<div class="slider" slider>
+  <ul class="slides">
     <li ng-repeat="file in files">
-      <img class="responsive-img" ng-src="{{file.url}}">
+      <img ng-src="{{file.url}}"> <!-- random image -->
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
     </li>
   </ul>
 </div>

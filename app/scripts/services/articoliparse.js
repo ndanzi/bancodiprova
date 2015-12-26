@@ -27,6 +27,23 @@ angular.module('provaApp')
                   'Content-Type':'application/json'
               }
           });
+      },
+      insertImage:function(data){
+        return $http.post('https://api.parse.com/1/classes/immagini',data,{
+          headers:{
+            'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
+            'X-Parse-REST-API-Key':PARSE_CREDENTIALS.REST_API_KEY,
+            'Content-Type':'application/json',
+          }
+        });
+      },
+      getAllImages:function() {
+        return $http.get('https://api.parse.com/1/classes/immagini',{
+          headers:{
+            'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
+            'X-Parse-REST-API-Key':PARSE_CREDENTIALS.REST_API_KEY,
+          }
+        });
       }
     }
 

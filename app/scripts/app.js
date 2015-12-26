@@ -22,5 +22,6 @@ angular.module('provaApp', [
     'ui.materialize',
     'textAngular',
     'angular-filepicker',
-    'angular-carousel'
+    'angular-carousel',
+    'ngMaterialize'
   ]);

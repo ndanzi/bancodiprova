@@ -1,5 +1,15 @@
+<div class="slider" slider>
+  <ul class="slides">
+    <li ng-repeat="i in immagini">
+      <img ng-src="{{i.url}}"> <!-- random image -->
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+  </ul>
+</div>
 <div class="container">
-
 	<div class="row">
     <h2>Crea Articolo</h2>
     <div class="divider"></div>
@@ -10,21 +20,11 @@
 		</div>
 	</div>
 	<div class="row">
-		<form action="#">
-			<div class="file-field input-field">
-				<div class="btn">
-					<span>File</span>
-					<input type="file">
-				</div>
-				<div class="file-path-wrapper">
-					<input class="file-path validate" type="text">
-				</div>
-			</div>
-		</form>
-	</div>
-	<div class="row">
 	    <div class="input-field col s12">
-	      <div text-angular ng-model="articolo.testo"  ta-toolbar-class="btn-toolbar" ta-toolbar-group-class="btn-group" ta-toolbar-button-class="btn-flat waves-effect waves-orange btn" ta-toolbar-button-active-class="active"></div>
+	      <div text-angular ng-model="articolo.testo"  ta-toolbar-class="btn-toolbar" ta-toolbar-group-class="btn-group" ta-toolbar-button-class="btn-flat waves-effect waves-orange btn" ta-toolbar-button-active-class="active" ta-toolbar="[['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'pre', 'quote'],
+        ['bold', 'italics', 'underline', 'ul', 'ol', 'redo', 'undo', 'clear'],
+        ['justifyLeft','justifyCenter','justifyRight', 'justifyFull'],
+        ['myInsertImage', 'insertLink', 'insertVideo']]"></div>
 	    </div>
 	</div>
     <span style="margin: 10px"></span>

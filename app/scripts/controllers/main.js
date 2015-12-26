@@ -8,8 +8,8 @@
  * Controller of the provaApp
  */
 angular.module('provaApp')
-  .controller('MainCtrl',["$scope", "Auth", 'filepickerService', '$window', 'Ref', '$firebaseArray',
-    function($scope, Auth, filepickerService, $window, Ref, $firebaseArray) {
+  .controller('MainCtrl',["$scope", "Auth", 'filepickerService', '$window', 'Ref', '$firebaseArray', '$timeout',
+    function($scope, Auth, filepickerService, $window, Ref, $firebaseArray, $timeout) {
       $scope.auth = Auth;
 
       // any time auth status updates, add the user data to scope
@@ -24,6 +24,7 @@ angular.module('provaApp')
 
       $scope.files.$loaded(function(evento) {
         console.log(evento);
+        $timeout($('.slider').slider({full_width: true}), 1000);
       });
 
       console.log($scope.files);

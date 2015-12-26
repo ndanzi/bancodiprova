@@ -45,6 +45,7 @@ module.exports = function(config) {
       'bower_components/textangular-no-style/src/textAngularSetup.js',
       'bower_components/angular-filepicker/dist/angular_filepicker.min.js',
       'bower_components/angular-carousel/dist/angular-carousel.js',
+      'bower_components/ngMaterialize/dist/ngMaterialize.min.js',
       'bower_components/mockfirebase/browser/mockfirebase.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
